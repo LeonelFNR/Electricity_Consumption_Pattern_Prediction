@@ -1,0 +1,664 @@
+Warning: Data set has more than 10000 observations. Because ASHA optimization often finds good solutions faster than Bayesian
+optimization for data sets with many observations, try specifying the 'Optimizer' field value as 'asha' in the
+'HyperparameterOptimizationOptions' value structure. 
+> In bayesoptim/MultiModelOptim/checkOptimizer (line 583)
+In bayesoptim.ClassificationMultiModelOptim (line 46)
+In fitcauto (line 66)
+In Trying_models (line 24) 
+Warning: It is recommended that you first standardize all numeric predictors when optimizing the Naive Bayes 'Width' parameter.
+Ignore this warning if you have done that. 
+> In bayesoptim.warn (line 6)
+In classreg.learning.paramoptim/BayesoptInfoCNB/getVariableDescriptions (line 46)
+In bayesoptim/MultiModelOptim/initializeLearnersSearchRange (line 173)
+In bayesoptim/MultiModelOptim/performOptimization (line 109)
+In fitcauto (line 67)
+In Trying_models (line 24) 
+Learner types to explore: ensemble, knn, nb, net, svm, tree
+Total iterations (MaxObjectiveEvaluations): 180
+Total time (MaxTime): Inf
+
+|=============================================================================================================================================|
+| Iter | Eval   | Validation | Time for training | Observed min    | Estimated min   | Learner      | Hyperparameter:                 Value   |
+|      | result | loss       | & validation (sec)| validation loss | validation loss |              |                                         |
+|=============================================================================================================================================|
+|    1 | Best   |    0.72171 |            4.6331 |         0.72171 |         0.72171 |           nb | DistributionNames:               kernel |
+|      |        |            |                   |                 |                 |              | Width:                       1.1554e-11 |
+|    2 | Best   |    0.33383 |            3.2248 |         0.33383 |         0.33383 |          knn | NumNeighbors:                        16 |
+|    3 | Accept |    0.33737 |             114.2 |         0.33383 |         0.33383 |     ensemble | Method:                             Bag |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  347 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                         42 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        58 |
+|    4 | Accept |    0.44361 |           0.64755 |         0.33383 |         0.33383 |         tree | MinLeafSize:                       3344 |
+|    5 | Accept |    0.33459 |             4.468 |         0.33383 |          0.3342 |          knn | NumNeighbors:                       341 |
+|    6 | Accept |    0.36735 |            30.587 |         0.33383 |          0.3342 |     ensemble | Method:                        RUSBoost |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  220 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                         15 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        28 |
+|    7 | Accept |    0.39569 |            174.74 |         0.33383 |          0.3342 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                   5.5729 |
+|      |        |            |                   |                 |                 |              | KernelScale:                     52.719 |
+|    8 | Accept |    0.35818 |           0.65377 |         0.33383 |          0.3342 |           nb | DistributionNames:               normal |
+|      |        |            |                   |                 |                 |              | Width:                              NaN |
+15  end
+|    9 | Accept |    0.68085 |              2726 |         0.33383 |          0.3342 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                   28.941 |
+|      |        |            |                   |                 |                 |              | KernelScale:                   0.044711 |
+|   10 | Accept |    0.34892 |            349.24 |         0.33383 |          0.3342 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      2.9386e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                [ 132   48 ] |
+|   11 | Accept |    0.34803 |            10.357 |         0.33383 |         0.33822 |          knn | NumNeighbors:                      1187 |
+|   12 | Accept |    0.58897 |            34.578 |         0.33383 |         0.33822 |     ensemble | Method:                        RUSBoost |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  255 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                       2579 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        79 |
+|   13 | Best   |     0.3312 |            4.7864 |          0.3312 |         0.33662 |          knn | NumNeighbors:                       179 |
+|   14 | Accept |    0.54763 |            154.35 |          0.3312 |         0.33662 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                   1.4976 |
+|      |        |            |                   |                 |                 |              | KernelScale:                     675.91 |
+|   15 | Accept |    0.33838 |            189.13 |          0.3312 |         0.33662 |     ensemble | Method:                             Bag |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  384 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                          9 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        58 |
+|   16 | Accept |     0.3746 |            2.2604 |          0.3312 |         0.33662 |         tree | MinLeafSize:                         23 |
+|   17 | Accept |    0.44361 |           0.51804 |          0.3312 |         0.33662 |         tree | MinLeafSize:                       4194 |
+|   18 | Accept |    0.72171 |            3.6697 |          0.3312 |         0.33662 |           nb | DistributionNames:               kernel |
+|      |        |            |                   |                 |                 |              | Width:                       3.9992e-21 |
+|   19 | Accept |    0.38794 |            76.223 |          0.3312 |         0.33662 |     ensemble | Method:                        RUSBoost |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  393 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                        407 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        95 |
+|   20 | Accept |    0.72171 |            4.3669 |          0.3312 |         0.33662 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                         0.70238 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                [ 245   48 ] |
+|=============================================================================================================================================|
+| Iter | Eval   | Validation | Time for training | Observed min    | Estimated min   | Learner      | Hyperparameter:                 Value   |
+|      | result | loss       | & validation (sec)| validation loss | validation loss |              |                                         |
+|=============================================================================================================================================|
+|   21 | Accept |    0.39364 |            1.1278 |          0.3312 |         0.33662 |         tree | MinLeafSize:                        723 |
+|   22 | Accept |    0.35818 |           0.44143 |          0.3312 |         0.33662 |           nb | DistributionNames:               normal |
+|      |        |            |                   |                 |                 |              | Width:                              NaN |
+|   23 | Accept |    0.72171 |            6.6443 |          0.3312 |         0.33662 |           nb | DistributionNames:               kernel |
+|      |        |            |                   |                 |                 |              | Width:                       6.0978e-15 |
+|   24 | Accept |    0.35818 |            1.2941 |          0.3312 |         0.33662 |           nb | DistributionNames:               normal |
+|      |        |            |                   |                 |                 |              | Width:                              NaN |
+|   25 | Accept |    0.42678 |            9.9388 |          0.3312 |         0.33662 |         tree | MinLeafSize:                          3 |
+|   26 | Best   |    0.32731 |            387.72 |         0.32731 |         0.33662 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                   3.8501 |
+|      |        |            |                   |                 |                 |              | KernelScale:                     8.9449 |
+|   27 | Accept |    0.44361 |           0.62102 |         0.32731 |         0.33662 |         tree | MinLeafSize:                       2794 |
+|   28 | Accept |    0.32861 |            3.3191 |         0.32731 |         0.33558 |          knn | NumNeighbors:                        97 |
+|   29 | Accept |    0.72171 |            3.5096 |         0.32731 |         0.33558 |           nb | DistributionNames:               kernel |
+|      |        |            |                   |                 |                 |              | Width:                       5.3512e-16 |
+|   30 | Best   |    0.32352 |             439.8 |         0.32352 |         0.33558 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0015897 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                 [ 41  275 ] |
+|   31 | Accept |    0.35818 |           0.47736 |         0.32352 |         0.33558 |           nb | DistributionNames:               normal |
+|      |        |            |                   |                 |                 |              | Width:                              NaN |
+|   32 | Accept |    0.35224 |            51.261 |         0.32352 |         0.33558 |     ensemble | Method:                        RUSBoost |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  219 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                          2 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                       206 |
+|   33 | Accept |    0.42678 |            4.5432 |         0.32352 |         0.33558 |         tree | MinLeafSize:                          3 |
+|   34 | Accept |    0.33781 |            3.7635 |         0.32352 |         0.33399 |          knn | NumNeighbors:                         9 |
+|   35 | Accept |    0.35723 |            12.783 |         0.32352 |          0.3338 |          knn | NumNeighbors:                      1819 |
+|   36 | Accept |    0.33291 |            304.76 |         0.32352 |          0.3338 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      8.1019e-09 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 34  58 ] |
+|   37 | Accept |    0.34354 |            3.1222 |         0.32352 |          0.3354 |          knn | NumNeighbors:                         7 |
+|   38 | Accept |    0.42074 |            3.0483 |         0.32352 |         0.33619 |          knn | NumNeighbors:                         2 |
+|   39 | Accept |    0.33936 |             95.89 |         0.32352 |         0.33619 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00022452 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                    [ 1  4 ] |
+|   40 | Accept |    0.38798 |            70.106 |         0.32352 |         0.33619 |     ensemble | Method:                        RUSBoost |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  358 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                         88 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        13 |
+|=============================================================================================================================================|
+| Iter | Eval   | Validation | Time for training | Observed min    | Estimated min   | Learner      | Hyperparameter:                 Value   |
+|      | result | loss       | & validation (sec)| validation loss | validation loss |              |                                         |
+|=============================================================================================================================================|
+|   41 | Best   |    0.31944 |            533.96 |         0.31944 |         0.33619 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0010998 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                 [ 94  140 ] |
+|   42 | Accept |    0.57464 |            674.39 |         0.31944 |         0.33619 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                0.0032721 |
+|      |        |            |                   |                 |                 |              | KernelScale:                    0.28675 |
+|   43 | Accept |    0.35818 |            0.4096 |         0.31944 |         0.33619 |           nb | DistributionNames:               normal |
+|      |        |            |                   |                 |                 |              | Width:                              NaN |
+|   44 | Accept |    0.44196 |           0.67143 |         0.31944 |         0.33619 |         tree | MinLeafSize:                       2560 |
+|   45 | Accept |    0.91979 |            506.68 |         0.31944 |         0.33619 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                0.0013922 |
+|      |        |            |                   |                 |                 |              | KernelScale:                  0.0036291 |
+|   46 | Accept |    0.71061 |            3146.9 |         0.31944 |         0.33619 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                    431.1 |
+|      |        |            |                   |                 |                 |              | KernelScale:                   0.016526 |
+|   47 | Best   |    0.31542 |            534.61 |         0.31542 |         0.33619 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00081254 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                 [ 46  249 ] |
+|   48 | Accept |    0.32836 |            4.2555 |         0.31542 |         0.33569 |          knn | NumNeighbors:                        27 |
+|   49 | Accept |    0.36277 |                88 |         0.31542 |         0.33569 |     ensemble | Method:                        RUSBoost |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  381 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                          2 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                       201 |
+|   50 | Accept |    0.32893 |             15.64 |         0.31542 |         0.32928 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0016732 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                   [ 6  14 ] |
+|   51 | Accept |     0.3585 |             50.68 |         0.31542 |         0.32928 |     ensemble | Method:                        RUSBoost |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  264 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                         31 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        91 |
+|   52 | Accept |     0.3696 |            2.1873 |         0.31542 |         0.32928 |         tree | MinLeafSize:                        115 |
+|   53 | Accept |    0.35818 |           0.72153 |         0.31542 |         0.32928 |           nb | DistributionNames:               normal |
+|      |        |            |                   |                 |                 |              | Width:                              NaN |
+|   54 | Accept |    0.38086 |            3.0535 |         0.31542 |         0.32928 |         tree | MinLeafSize:                         18 |
+|   55 | Accept |    0.41448 |            33.944 |         0.31542 |         0.32928 |          knn | NumNeighbors:                      5942 |
+|   56 | Accept |    0.35584 |            61.978 |         0.31542 |         0.32928 |     ensemble | Method:                        RUSBoost |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  254 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                         13 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                       119 |
+|   57 | Accept |    0.31814 |            195.17 |         0.31542 |         0.33317 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      2.3673e-09 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 16  42  17 ] |
+|   58 | Accept |    0.34354 |            3.9899 |         0.31542 |         0.33317 |          knn | NumNeighbors:                         7 |
+|   59 | Accept |    0.72171 |            285.03 |         0.31542 |         0.33317 |          svm | Coding:                        onevsone |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                 0.014466 |
+|      |        |            |                   |                 |                 |              | KernelScale:                  0.0010557 |
+|   60 | Accept |    0.72171 |            4.3095 |         0.31542 |         0.33317 |           nb | DistributionNames:               kernel |
+|      |        |            |                   |                 |                 |              | Width:                       7.2387e-18 |
+|=============================================================================================================================================|
+| Iter | Eval   | Validation | Time for training | Observed min    | Estimated min   | Learner      | Hyperparameter:                 Value   |
+|      | result | loss       | & validation (sec)| validation loss | validation loss |              |                                         |
+|=============================================================================================================================================|
+|   61 | Accept |    0.55538 |            121.85 |         0.31542 |         0.33317 |          svm | Coding:                        onevsone |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                   0.2844 |
+|      |        |            |                   |                 |                 |              | KernelScale:                     328.39 |
+|   62 | Accept |    0.71447 |            3058.3 |         0.31542 |         0.33317 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                   8.6047 |
+|      |        |            |                   |                 |                 |              | KernelScale:                  0.0087081 |
+|   63 | Accept |    0.42188 |            334.62 |         0.31542 |         0.33317 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                   222.83 |
+|      |        |            |                   |                 |                 |              | KernelScale:                     318.38 |
+|   64 | Accept |    0.72171 |            9.4041 |         0.31542 |         0.33317 |           nb | DistributionNames:               kernel |
+|      |        |            |                   |                 |                 |              | Width:                       1.8363e-10 |
+|   65 | Accept |    0.35818 |            1.0778 |         0.31542 |         0.33317 |           nb | DistributionNames:               normal |
+|      |        |            |                   |                 |                 |              | Width:                              NaN |
+|   66 | Accept |    0.37548 |            18.689 |         0.31542 |         0.33317 |          knn | NumNeighbors:                      2986 |
+|   67 | Accept |    0.41733 |           0.95602 |         0.31542 |         0.33317 |         tree | MinLeafSize:                       1221 |
+|   68 | Accept |    0.36947 |            1.6696 |         0.31542 |         0.33317 |         tree | MinLeafSize:                         93 |
+|   69 | Accept |    0.36852 |             865.3 |         0.31542 |         0.33317 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                   390.09 |
+|      |        |            |                   |                 |                 |              | KernelScale:                     87.687 |
+|   70 | Accept |    0.37045 |            64.225 |         0.31542 |         0.33317 |     ensemble | Method:                             Bag |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  207 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                          2 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        10 |
+|   71 | Accept |    0.31707 |            153.84 |         0.31542 |         0.32324 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      1.9999e-05 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 26  52 ] |
+|   72 | Accept |    0.40205 |            1.0101 |         0.31542 |         0.32324 |         tree | MinLeafSize:                        861 |
+|   73 | Accept |    0.72171 |            3.3825 |         0.31542 |         0.32324 |           nb | DistributionNames:               kernel |
+|      |        |            |                   |                 |                 |              | Width:                       4.8051e-10 |
+|   74 | Accept |    0.35059 |            183.61 |         0.31542 |         0.32324 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                0.0073929 |
+|      |        |            |                   |                 |                 |              | KernelScale:                     2.2809 |
+|   75 | Accept |    0.36441 |            36.872 |         0.31542 |         0.32324 |     ensemble | Method:                        RUSBoost |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  218 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                         35 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        35 |
+|   76 | Accept |    0.37877 |            1.9108 |         0.31542 |         0.32324 |         tree | MinLeafSize:                        223 |
+|   77 | Accept |    0.72171 |            8.2384 |         0.31542 |         0.33175 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                         0.11151 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 3  246 ] |
+|   78 | Accept |    0.32997 |            176.35 |         0.31542 |         0.33164 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      7.8979e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 59  19 ] |
+|   79 | Accept |    0.33263 |            865.75 |         0.31542 |         0.32922 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      8.0545e-05 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                         282 |
+|   80 | Accept |    0.40936 |            2336.5 |         0.31542 |         0.32828 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      1.7392e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:           [ 284  279    7 ] |
+|=============================================================================================================================================|
+| Iter | Eval   | Validation | Time for training | Observed min    | Estimated min   | Learner      | Hyperparameter:                 Value   |
+|      | result | loss       | & validation (sec)| validation loss | validation loss |              |                                         |
+|=============================================================================================================================================|
+|   81 | Accept |    0.56414 |            5.2227 |         0.31542 |         0.32428 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0057963 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 39   4 ] |
+|   82 | Accept |    0.36644 |            65.807 |         0.31542 |         0.32428 |     ensemble | Method:                        RUSBoost |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  273 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                         12 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        35 |
+|   83 | Accept |    0.72171 |            3.3243 |         0.31542 |         0.32428 |           nb | DistributionNames:               kernel |
+|      |        |            |                   |                 |                 |              | Width:                       3.0997e-11 |
+|   84 | Accept |    0.71725 |            481.87 |         0.31542 |         0.32428 |          svm | Coding:                        onevsone |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                  0.48674 |
+|      |        |            |                   |                 |                 |              | KernelScale:                  0.0048981 |
+|   85 | Accept |    0.49551 |           0.42646 |         0.31542 |         0.32428 |         tree | MinLeafSize:                       5963 |
+|   86 | Accept |     0.3374 |            163.99 |         0.31542 |         0.32428 |     ensemble | Method:                             Bag |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  304 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                         22 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        63 |
+|   87 | Accept |    0.34284 |             6.766 |         0.31542 |         0.32428 |          knn | NumNeighbors:                       834 |
+|   88 | Accept |    0.41325 |            4.6524 |         0.31542 |         0.32428 |          knn | NumNeighbors:                         1 |
+|   89 | Accept |     0.3386 |            241.58 |         0.31542 |         0.32428 |     ensemble | Method:                             Bag |
+|      |        |            |                   |                 |                 |              | NumLearningCycles:                  490 |
+|      |        |            |                   |                 |                 |              | MinLeafSize:                         20 |
+|      |        |            |                   |                 |                 |              | MaxNumSplits:                        46 |
+|   90 | Accept |    0.34423 |            230.32 |         0.31542 |         0.32428 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                0.0087347 |
+|      |        |            |                   |                 |                 |              | KernelScale:                     2.7603 |
+|   91 | Accept |    0.59517 |             3.524 |         0.31542 |          0.3246 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0030771 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                    [ 4  3 ] |
+|   92 | Accept |    0.36289 |            165.77 |         0.31542 |         0.32415 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0022232 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                   [ 1  97 ] |
+|   93 | Accept |    0.33649 |            423.45 |         0.31542 |         0.32707 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0022487 |
+|      |        |            |                   |                 |                 |              | LayerSizes:             [ 5   35  169 ] |
+|   94 | Accept |    0.41274 |            205.38 |         0.31542 |          0.3265 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0023117 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 7  160 ] |
+|   95 | Accept |    0.48583 |            1660.5 |         0.31542 |          0.3265 |          svm | Coding:                        onevsall |
+|      |        |            |                   |                 |                 |              | BoxConstraint:                   4.3363 |
+|      |        |            |                   |                 |                 |              | KernelScale:                    0.82232 |
+|   96 | Accept |    0.72171 |            36.366 |         0.31542 |         0.32965 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0026145 |
+|      |        |            |                   |                 |                 |              | LayerSizes:            [ 36   86  147 ] |
+|   97 | Accept |    0.32671 |            359.67 |         0.31542 |         0.32918 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0021744 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 99  29  43 ] |
+|   98 | Accept |    0.32946 |            40.973 |         0.31542 |         0.32612 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0019121 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 13  91 ] |
+|   99 | Accept |    0.33165 |            19.282 |         0.31542 |         0.32733 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0024295 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 11  20 ] |
+|  100 | Accept |    0.38358 |            92.438 |         0.31542 |          0.3245 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0024624 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 72  71 ] |
+|=============================================================================================================================================|
+| Iter | Eval   | Validation | Time for training | Observed min    | Estimated min   | Learner      | Hyperparameter:                 Value   |
+|      | result | loss       | & validation (sec)| validation loss | validation loss |              |                                         |
+|=============================================================================================================================================|
+|  101 | Accept |    0.46692 |            5.5427 |         0.31542 |         0.32564 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0025159 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 12   8 ] |
+|  102 | Accept |    0.44582 |            424.41 |         0.31542 |         0.32699 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00036851 |
+|      |        |            |                   |                 |                 |              | LayerSizes:            [ 22  274    2 ] |
+|  103 | Accept |    0.35436 |            123.98 |         0.31542 |         0.33003 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0025223 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                   [ 7  56 ] |
+|  104 | Accept |    0.33693 |              7.25 |         0.31542 |         0.33008 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0025493 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                           5 |
+|  105 | Accept |    0.36723 |            25.969 |         0.31542 |          0.3263 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00083674 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 13   3 ] |
+|  106 | Accept |    0.33396 |            42.889 |         0.31542 |         0.32703 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0025366 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                [ 105   23 ] |
+|  107 | Accept |    0.33737 |            546.96 |         0.31542 |         0.33276 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0025778 |
+|      |        |            |                   |                 |                 |              | LayerSizes:           [ 164    9  146 ] |
+|  108 | Accept |    0.35635 |            7.6827 |         0.31542 |         0.32943 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0025796 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                           2 |
+|  109 | Accept |    0.37871 |            392.97 |         0.31542 |         0.33276 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      1.5575e-09 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 72  90   2 ] |
+|  110 | Accept |    0.38137 |            21.064 |         0.31542 |         0.33258 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0025834 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                          15 |
+|  111 | Accept |    0.33487 |            69.438 |         0.31542 |         0.33276 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0025955 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                [ 134   50 ] |
+|  112 | Accept |    0.33345 |            453.95 |         0.31542 |         0.33191 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      4.8622e-07 |
+|      |        |            |                   |                 |                 |              | LayerSizes:             [ 3   45  111 ] |
+|  113 | Accept |    0.33437 |            101.77 |         0.31542 |         0.32983 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0025881 |
+|      |        |            |                   |                 |                 |              | LayerSizes:            [ 32    5  269 ] |
+|  114 | Accept |    0.31979 |            285.69 |         0.31542 |          0.3292 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      4.4036e-06 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 3  52  47 ] |
+|  115 | Accept |    0.32719 |            256.08 |         0.31542 |         0.32903 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00013105 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 9  60  29 ] |
+|  116 | Accept |    0.32241 |            548.55 |         0.31542 |         0.32582 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00010609 |
+|      |        |            |                   |                 |                 |              | LayerSizes:           [ 180    7   61 ] |
+|  117 | Accept |    0.33301 |            449.83 |         0.31542 |         0.32903 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      2.7136e-06 |
+|      |        |            |                   |                 |                 |              | LayerSizes:             [ 3  122   40 ] |
+|  118 | Accept |    0.32513 |            189.14 |         0.31542 |         0.32841 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      7.6153e-06 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 4  30  15 ] |
+|  119 | Accept |    0.57859 |            61.174 |         0.31542 |         0.33108 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0007853 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 6  23  59 ] |
+|  120 | Accept |    0.32798 |            515.09 |         0.31542 |         0.32989 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00018301 |
+|      |        |            |                   |                 |                 |              | LayerSizes:            [ 65   23  133 ] |
+|=============================================================================================================================================|
+| Iter | Eval   | Validation | Time for training | Observed min    | Estimated min   | Learner      | Hyperparameter:                 Value   |
+|      | result | loss       | & validation (sec)| validation loss | validation loss |              |                                         |
+|=============================================================================================================================================|
+|  121 | Accept |    0.32943 |            180.08 |         0.31542 |         0.32626 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      3.2791e-05 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 5   1  56 ] |
+|  122 | Accept |    0.31757 |            263.62 |         0.31542 |         0.32828 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0006135 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 16  38  22 ] |
+|  123 | Accept |    0.31874 |            225.62 |         0.31542 |         0.32188 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      5.2151e-06 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 6  29  34 ] |
+|  124 | Accept |    0.32643 |            94.709 |         0.31542 |         0.32446 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00044404 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 14  35  12 ] |
+|  125 | Accept |    0.34468 |            384.99 |         0.31542 |         0.32601 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00031501 |
+|      |        |            |                   |                 |                 |              | LayerSizes:           [ 110   22   27 ] |
+|  126 | Accept |    0.31909 |            189.91 |         0.31542 |         0.32276 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      4.4643e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 8  24  28 ] |
+|  127 | Accept |    0.33241 |            682.16 |         0.31542 |         0.32304 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0026019 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                [ 165  123 ] |
+|  128 | Accept |    0.33294 |            16.881 |         0.31542 |         0.32207 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                        0.002608 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                    [ 9  7 ] |
+|  129 | Accept |    0.31694 |             189.5 |         0.31542 |         0.32545 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00037749 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 11  11  17 ] |
+|  130 | Accept |    0.33377 |            137.98 |         0.31542 |         0.32245 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                        0.002609 |
+|      |        |            |                   |                 |                 |              | LayerSizes:           [ 199   47   81 ] |
+|  131 | Accept |    0.32061 |            196.83 |         0.31542 |         0.32167 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      1.8258e-06 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 5  24  31 ] |
+|  132 | Accept |    0.33266 |            31.595 |         0.31542 |           0.323 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0026055 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 32  44 ] |
+|  133 | Accept |    0.36745 |            66.128 |         0.31542 |         0.32268 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00039166 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 2  13  20 ] |
+|  134 | Accept |    0.32282 |            238.36 |         0.31542 |         0.32162 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      2.2335e-07 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 22   2  53 ] |
+|  135 | Accept |    0.35717 |            179.53 |         0.31542 |         0.32189 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00038012 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 36   8  34 ] |
+|  136 | Accept |    0.31975 |            164.97 |         0.31542 |         0.32026 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      4.9229e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 6  16  22 ] |
+|  137 | Accept |      0.319 |            196.61 |         0.31542 |         0.32013 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00068612 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 10   9  30 ] |
+|  138 | Accept |    0.33456 |            782.72 |         0.31542 |          0.3209 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0026108 |
+|      |        |            |                   |                 |                 |              | LayerSizes:           [ 203    3  271 ] |
+|  139 | Accept |    0.33433 |            227.93 |         0.31542 |         0.32044 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0027306 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 28   8  71 ] |
+|  140 | Accept |    0.31994 |            161.86 |         0.31542 |         0.32038 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       3.188e-09 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 7   6  29 ] |
+|=============================================================================================================================================|
+| Iter | Eval   | Validation | Time for training | Observed min    | Estimated min   | Learner      | Hyperparameter:                 Value   |
+|      | result | loss       | & validation (sec)| validation loss | validation loss |              |                                         |
+|=============================================================================================================================================|
+|  141 | Accept |     0.3559 |            46.441 |         0.31542 |         0.32023 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0026121 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 5  16  12 ] |
+|  142 | Accept |    0.33225 |            330.74 |         0.31542 |         0.32001 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0026463 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 91  58 ] |
+|  143 | Accept |     0.3244 |            293.37 |         0.31542 |          0.3197 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       5.183e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 6  21  71 ] |
+|  144 | Accept |    0.44098 |            443.29 |         0.31542 |         0.32002 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0007142 |
+|      |        |            |                   |                 |                 |              | LayerSizes:             [ 4   27  211 ] |
+|  145 | Accept |    0.31707 |            266.05 |         0.31542 |         0.32031 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0007405 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 85   8  32 ] |
+|  146 | Accept |     0.3202 |            343.17 |         0.31542 |         0.32038 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       3.886e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 11  96  24 ] |
+|  147 | Accept |    0.32738 |            72.625 |         0.31542 |         0.32096 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00080707 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 16  94 ] |
+|  148 | Accept |    0.31618 |            933.42 |         0.31542 |         0.32035 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00044364 |
+|      |        |            |                   |                 |                 |              | LayerSizes:           [ 285   73   48 ] |
+|  149 | Accept |    0.34268 |            282.01 |         0.31542 |         0.32053 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00026556 |
+|      |        |            |                   |                 |                 |              | LayerSizes:             [ 7   15  109 ] |
+|  150 | Accept |    0.32557 |            191.87 |         0.31542 |         0.32002 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00079553 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 5  17  25 ] |
+|  151 | Accept |    0.33373 |            32.359 |         0.31542 |         0.32015 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0027775 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 19  26 ] |
+|  152 | Accept |    0.33411 |            50.059 |         0.31542 |         0.32021 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                        0.002693 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                 [ 39  143 ] |
+|  153 | Accept |    0.33297 |            33.944 |         0.31542 |         0.32078 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0026173 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 28  58 ] |
+|  154 | Accept |    0.50215 |            191.84 |         0.31542 |         0.32041 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0028823 |
+|      |        |            |                   |                 |                 |              | LayerSizes:            [ 35    1  159 ] |
+|  155 | Accept |    0.32235 |            338.75 |         0.31542 |         0.32019 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00066455 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 5  48  48 ] |
+|  156 | Accept |     0.3338 |            236.05 |         0.31542 |         0.32013 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0026895 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                [ 231  180 ] |
+|  157 | Accept |     0.3337 |            29.979 |         0.31542 |         0.32005 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                        0.002627 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 15  13  10 ] |
+|  158 | Accept |    0.36172 |             543.4 |         0.31542 |         0.31883 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00056995 |
+|      |        |            |                   |                 |                 |              | LayerSizes:           [ 240    3   32 ] |
+|  159 | Accept |    0.31703 |            391.16 |         0.31542 |          0.3197 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      4.9823e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:             [ 8    9  151 ] |
+|  160 | Accept |     0.3338 |            12.039 |         0.31542 |         0.31955 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0026303 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                   [ 5  30 ] |
+|=============================================================================================================================================|
+| Iter | Eval   | Validation | Time for training | Observed min    | Estimated min   | Learner      | Hyperparameter:                 Value   |
+|      | result | loss       | & validation (sec)| validation loss | validation loss |              |                                         |
+|=============================================================================================================================================|
+|  161 | Accept |    0.33247 |            127.62 |         0.31542 |         0.31961 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0028102 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 18  20 ] |
+|  162 | Accept |    0.33525 |            26.216 |         0.31542 |         0.31976 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0028458 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                   [ 5  60 ] |
+|  163 | Accept |    0.31713 |            485.59 |         0.31542 |         0.31946 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00058776 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 11  80  56 ] |
+|  164 | Accept |    0.36185 |            110.47 |         0.31542 |         0.31897 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00058846 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 22  24  60 ] |
+|  165 | Accept |    0.33848 |            290.28 |         0.31542 |         0.31977 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      1.2193e-09 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 1  84  24 ] |
+|  166 | Accept |    0.31783 |            423.88 |         0.31542 |         0.31962 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      6.0032e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:            [ 10  123   24 ] |
+|  167 | Accept |    0.32042 |             523.7 |         0.31542 |         0.31958 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      9.3004e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:            [ 13   47  144 ] |
+|  168 | Accept |    0.31991 |            336.52 |         0.31542 |         0.31966 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      7.7688e-08 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 13  86  56 ] |
+|  169 | Accept |    0.33971 |            18.956 |         0.31542 |         0.31965 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0028582 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                          36 |
+|  170 | Accept |     0.3182 |            340.46 |         0.31542 |         0.31927 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00076607 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 18  85 ] |
+|  171 | Accept |    0.33611 |            18.687 |         0.31542 |         0.31905 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0028161 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                    [ 6  8 ] |
+|  172 | Accept |    0.32946 |             740.3 |         0.31542 |         0.31926 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00017947 |
+|      |        |            |                   |                 |                 |              | LayerSizes:            [ 34   93  151 ] |
+|  173 | Accept |    0.31884 |            257.06 |         0.31542 |          0.3186 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      4.5631e-05 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 11  87 ] |
+|  174 | Accept |    0.36795 |            412.06 |         0.31542 |         0.31928 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      5.9594e-06 |
+|      |        |            |                   |                 |                 |              | LayerSizes:              [ 16  86  21 ] |
+|  175 | Accept |    0.36615 |            61.105 |         0.31542 |         0.31953 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00069902 |
+|      |        |            |                   |                 |                 |              | LayerSizes:               [ 9  21  17 ] |
+|  176 | Accept |    0.34547 |            14.901 |         0.31542 |         0.32005 |          net | Activations:                       none |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0028504 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                    [ 6  2 ] |
+|  177 | Accept |    0.32273 |            410.56 |         0.31542 |         0.31908 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      0.00018092 |
+|      |        |            |                   |                 |                 |              | LayerSizes:             [ 6    2  223 ] |
+|  178 | Accept |    0.33557 |            277.22 |         0.31542 |         0.31892 |          net | Activations:                       tanh |
+|      |        |            |                   |                 |                 |              | Standardize:                      false |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0028691 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                         166 |
+|  179 | Accept |    0.33304 |            91.754 |         0.31542 |         0.31968 |          net | Activations:                       relu |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                       0.0028739 |
+|      |        |            |                   |                 |                 |              | LayerSizes:                  [ 14   5 ] |
+|  180 | Accept |    0.33139 |            704.62 |         0.31542 |         0.32069 |          net | Activations:                    sigmoid |
+|      |        |            |                   |                 |                 |              | Standardize:                       true |
+|      |        |            |                   |                 |                 |              | Lambda:                      3.0861e-07 |
+|      |        |            |                   |                 |                 |              | LayerSizes:            [ 35   30  242 ] |
+
+__________________________________________________________
+Optimization completed.
+Total iterations: 180
+Total elapsed time: 43989.4257 seconds
+Total time for training and validation: 43770.0918 seconds
+
+Best observed learner is a net model with:
+	Learner:                   net
+	Activations:              relu
+	Standardize:             false
+	Lambda:             0.00081254
+	LayerSizes:          [46  249]
+Observed validation loss: 0.31542
+Time for training and validation: 534.6139 seconds
+
+Best estimated learner (returned model) is a net model with:
+	Learner:                   net
+	Activations:           sigmoid
+	Standardize:              true
+	Lambda:             4.9229e-08
+	LayerSizes:        [6  16  22]
+Estimated validation loss: 0.32069
+Estimated time for training and validation: 184.6665 seconds

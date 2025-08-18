@@ -1,0 +1,40 @@
+>> load("bestFoundModel48h.mat")
+>> Mdl48
+
+Mdl48 = 
+
+  CompactClassificationNeuralNetwork
+               LayerSizes: [117 131]
+              Activations: 'tanh'
+    OutputLayerActivation: 'softmax'
+
+
+  Properties, Methods
+
+>> load("training_set_for_mdl48.mat")
+>> load("descarga_dataset_edificios\Energy-Datasets\Apartment-Dataset\Dataset_Consumption_Prediction_48hours.mat")
+>> Xtrain = second_dataset(idx,1:end-1);
+>> Ytrain = second_dataset(idx,end);
+>> forest = FitRandForest(Xtrain,Ytrain);
+>> Xtest = second_dataset(~idx, 1:end-1);
+>> N = size(second_dataset,1);
+>> test_idx = setdfiff(1:N, idx);
+Unrecognized function or variable 'setdfiff'.
+ 
+Did you mean:
+>> test_idx = setdiff(1:N, idx);
+>> Xtest = second_dataset(test_idx, 1:end-1);
+>> Ytest = second_dataset(test_idx, end);
+>> pred_forest = PredRandForest(forest,Xtest);
+>> sum(Ytest == pred_forest) / length(Ytest)
+
+ans =
+
+    0.6660
+
+>> pred_model48 = Mdl48.predict(Xtest);
+>> sum(Ytest == pred_model48) / length(Ytest)
+
+ans =
+
+    0.6683
