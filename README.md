@@ -1,0 +1,5 @@
+Personal implementation of tree bagging algorithm. 
+By modifying the fit function the user can select  by commenting the code to apply the normal tree bagging (training every tree with the whole set of features) or the classical random forest (random set of features to each tree).
+Moreover, an algorithm for conformal predictions has been implemented in order to provide a set of possible predictions with a selected certainty, where the alpha character is the tolerated error.
+This algorithms have been applied to predict electricity consumption patterns. 
+First clustering of some cleaned data on daily consumption of a set of apartaments during the year 2016 was performed. Second the obtained dataset with consumptions and its clusters was modified in order to obtain new datasets with different kinds of information to test both the algorithms and what informations were the most important.
